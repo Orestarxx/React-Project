@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className={css.header}>
         <ul>
-            <li><Link to={'allMovies'}>All Movies</Link></li>
+            <li><Link to={'/'}>All Movies</Link></li>
             <li><Link to={'actions'}>Actions</Link></li>
             <li><Link to={'adventures'}>Adventures</Link></li>
             <li><Link to={'animations'}>Animations</Link></li>
