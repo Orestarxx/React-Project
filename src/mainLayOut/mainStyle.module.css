@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.keyboard{
+    width: 90%;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.left{
+    width: 10%;
+    border: 1px solid;
+    margin-left: 20px;
+
+}
+.right{
+    width: 80%;
+    border: 1px solid;
+    margin-right: 20px;
+}
