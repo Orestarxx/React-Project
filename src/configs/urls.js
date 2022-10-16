@@ -5,9 +5,9 @@ const urls = {
     movies:'/discover/movie'
 }
 
-const genres = {
-    action:28,
+const genre = {
+    action:'28',
 
 }
 
-export {baseURL,urls}
+export {baseURL,urls,genre}
