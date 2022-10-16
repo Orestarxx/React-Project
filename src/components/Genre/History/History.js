@@ -1,9 +1,19 @@
 import React from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
+import {genre} from "../../../configs/urls";
+import {HistoryBuild} from "./HistoryBuild";
 
 const History = () => {
+    const {genres:histories} = useSelector(state => state.genreReducer)
+    const dispatch = useDispatch()
+    useEffect(() =>{
+        dispatch(genreActions.getByGenreId(genre.History))
+    },[])
     return (
         <div>
-
+            {histories.results?.map(history =><HistoryBuild history={history} key={history.id}/>)}
         </div>
     );
 };

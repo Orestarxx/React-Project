@@ -1,9 +1,19 @@
 import React from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
+import {genre} from "../../../configs/urls";
+import {FamilyBuild} from "./FamilyBuild";
 
 const Family = () => {
+    const {genres:families} = useSelector(state => state.genreReducer)
+    const dispatch = useDispatch()
+    useEffect(() =>{
+        dispatch(genreActions.getByGenreId(genre.Family))
+    },[])
     return (
         <div>
-
+            {families.results?.map(family =><FamilyBuild family={family} key={family.id}/>)}
         </div>
     );
 };

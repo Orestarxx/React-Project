@@ -7,15 +7,15 @@ import {ActionBuild} from "./ActionBuild";
 
 
 const Action = () => {
-   const {genres} = useSelector(state => state.genreReducer)
-    console.log(genres);
+   const {genres:action} = useSelector(state => state.genreReducer)
+    console.log(action);
     const dispatch = useDispatch()
     useEffect(() =>{
-     dispatch(genreActions.getByGenreId(genre.action))
+     dispatch(genreActions.getByGenreId(genre.Action))
     },[])
     return (
         <div>
-            {genres.results?.map(action => <ActionBuild key={action.id} action={action}/>)}
+            {action.results?.map(action => <ActionBuild key={action.id} action={action}/>)}
         </div>
     );
 };
