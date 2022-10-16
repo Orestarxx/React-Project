@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+
 import {movieActions} from "../../redux/slices";
 import {MovieListBuild} from "./MovieListBuild";
+import css from './movieStyle.module.css'
 
 const MovieList = () => {
    const {movies} = useSelector(state => state.movieReducer)
@@ -12,8 +14,8 @@ const MovieList = () => {
         dispatch(movieActions.getAllMovie())
     },[])
     return (
-        <div>
-            {movies.map(movie =><MovieListBuild key={movie.id} movie={movie}/>)}
+        <div className={css.holder}>
+            {movies.results?.map(movie =><MovieListBuild key={movie.id} movie={movie}/>)}
         </div>
     );
 };

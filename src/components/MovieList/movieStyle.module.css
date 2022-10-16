@@ -1,0 +1,15 @@
+.holder{
+    display: flex;
+    justify-content: space-around;
+
+}
+.card{
+    width: 200px;
+    height: 300px;
+}
+.imgHolder{
+    width:100%;
+}
+img{
+    width: 100%;
+}
