@@ -4,15 +4,16 @@ import {movieActions} from "../../redux/slices";
 import {MovieListBuild} from "./MovieListBuild";
 
 const MovieList = () => {
-   const dispatch = useDispatch()
    const {movies} = useSelector(state => state.movieReducer)
+    console.log(movies);
+    const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(movieActions.getAllMovie())
     },[])
     return (
         <div>
-            {movies.results.map(movie =><MovieListBuild key={movie.id} movie={movie}/>)}
+            {movies.map(movie =><MovieListBuild key={movie.id} movie={movie}/>)}
         </div>
     );
 };
