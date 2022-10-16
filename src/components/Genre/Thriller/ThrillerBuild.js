@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../../MovieList/movieStyle.module.css";
+import css from "../genreStyle.module.css";
 
 const ThrillerBuild = ({thriller}) => {
     const {backdrop_path,title} =thriller;

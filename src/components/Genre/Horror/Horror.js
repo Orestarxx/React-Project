@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {HorrorBuild} from "./HorrorBuild";
+import css from "../genreStyle.module.css";
 
 const Horror = () => {
     const {genres:horrors} = useSelector(state => state.genreReducer)
@@ -12,7 +13,7 @@ const Horror = () => {
         dispatch(genreActions.getByGenreId(genre.Horror))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {horrors.results?.map(horror =><HorrorBuild horror={horror} key={horror.id}/>)}
         </div>
     );

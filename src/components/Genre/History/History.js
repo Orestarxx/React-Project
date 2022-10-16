@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {HistoryBuild} from "./HistoryBuild";
+import css from "../genreStyle.module.css";
 
 const History = () => {
     const {genres:histories} = useSelector(state => state.genreReducer)
@@ -12,7 +13,7 @@ const History = () => {
         dispatch(genreActions.getByGenreId(genre.History))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {histories.results?.map(history =><HistoryBuild history={history} key={history.id}/>)}
         </div>
     );

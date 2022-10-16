@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {FamilyBuild} from "./FamilyBuild";
+import css from "../genreStyle.module.css";
 
 const Family = () => {
     const {genres:families} = useSelector(state => state.genreReducer)
@@ -12,7 +13,7 @@ const Family = () => {
         dispatch(genreActions.getByGenreId(genre.Family))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {families.results?.map(family =><FamilyBuild family={family} key={family.id}/>)}
         </div>
     );

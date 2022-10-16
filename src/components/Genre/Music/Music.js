@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {MusicBuild} from "./MusicBuild";
+import css from "../genreStyle.module.css";
 
 const Music = () => {
     const {genres:musics} = useSelector(state => state.genreReducer)
@@ -12,7 +13,7 @@ const Music = () => {
         dispatch(genreActions.getByGenreId(genre.Music))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {musics.results?.map(music =><MusicBuild music={music} key={music.id}/>)}
         </div>
     );

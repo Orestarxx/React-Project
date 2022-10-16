@@ -3,7 +3,7 @@ import {urls} from "../configs/urls";
 
 
 const movieService ={
-    getAll:() => axiosService.get(urls.movies),
-    getByGenreId:(id) => axiosService.get(`${urls.movies}?with_genres=${id}`)
+    getAll:(page=1) => axiosService.get(`${urls.movies}?page=${page}`),
+    getByGenreId:(id,page=1) => axiosService.get(`${urls.movies}?with_genres=${id}&page=${page}`)
 }
 export {movieService};

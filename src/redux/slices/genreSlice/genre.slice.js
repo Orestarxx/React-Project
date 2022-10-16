@@ -13,6 +13,7 @@ const getByGenreId = createAsyncThunk(
     async (id,{rejectWithValue}) =>{
         try{
            const {data} = await movieService.getByGenreId(id)
+            console.log(data);
             return data
         }catch (e){
             return rejectWithValue(e.response.data)

@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {DramaBuild} from "./DramaBuild";
+import css from "../genreStyle.module.css";
 
 const Drama = () => {
     const {genres:dramas} = useSelector(state => state.genreReducer)
@@ -12,7 +13,7 @@ const Drama = () => {
         dispatch(genreActions.getByGenreId(genre.Drama))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {dramas.results?.map(drama =><DramaBuild drama={drama} key={drama.id}/>)}
         </div>
     );

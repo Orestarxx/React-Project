@@ -1,7 +1,8 @@
 import React from 'react';
-import css from "../../MovieList/movieStyle.module.css";
+import css from "../genreStyle.module.css";
 
-const WesternBuild = () => {
+const WesternBuild = ({western}) => {
+    const {backdrop_path,title} = western;
     return (
         <div className={css.card}>
             <div className={css.genreInfo}></div>

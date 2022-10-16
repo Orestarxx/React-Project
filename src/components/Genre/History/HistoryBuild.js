@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../../MovieList/movieStyle.module.css";
+import css from "../genreStyle.module.css";
 
 const HistoryBuild = ({history}) => {
     const {backdrop_path,title} =history;

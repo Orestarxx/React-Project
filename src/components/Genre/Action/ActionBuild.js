@@ -1,4 +1,4 @@
-import css from "../../MovieList/movieStyle.module.css";
+import css from "../genreStyle.module.css";
 import React from "react";
 
 const ActionBuild = ({action}) => {

@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {DocumentaryBuild} from "./DocumentaryBuild";
+import css from "../genreStyle.module.css";
 
 const Documentary = () => {
 
@@ -13,7 +14,7 @@ const Documentary = () => {
         dispatch(genreActions.getByGenreId(genre.Documentary))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {documentaries.results?.map(documentary =><DocumentaryBuild documentary={documentary} key={documentary.id}/>)}
         </div>
     );

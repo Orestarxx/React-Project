@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {genreActions} from "../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../configs/urls";
 import {ActionBuild} from "./ActionBuild";
+import css from "../genreStyle.module.css";
 
 
 
@@ -14,7 +15,7 @@ const Action = () => {
      dispatch(genreActions.getByGenreId(genre.Action))
     },[])
     return (
-        <div>
+        <div className={css.holder}>
             {action.results?.map(action => <ActionBuild key={action.id} action={action}/>)}
         </div>
     );

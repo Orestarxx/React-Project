@@ -1,7 +1,8 @@
 import React from 'react';
-import css from "../../MovieList/movieStyle.module.css";
+import css from "../genreStyle.module.css";
 
-const WarBuild = () => {
+const WarBuild = ({war}) => {
+    const {backdrop_path,title} = war;
     return (
         <div className={css.card}>
             <div className={css.genreInfo}></div>
