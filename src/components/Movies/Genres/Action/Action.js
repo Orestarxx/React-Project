@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {genreActions} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {ActionBuild} from "./ActionBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 
 

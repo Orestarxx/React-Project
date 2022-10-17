@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {TvMovieBuild} from "./TV_MovieBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 const TvMovie = () => {
     const {genres:TV_Movies} = useSelector(state => state.genreReducer)

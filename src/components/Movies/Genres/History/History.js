@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {HistoryBuild} from "./HistoryBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 const History = () => {
     const {genres:histories} = useSelector(state => state.genreReducer)

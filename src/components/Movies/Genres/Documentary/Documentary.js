@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {DocumentaryBuild} from "./DocumentaryBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 const Documentary = () => {
 

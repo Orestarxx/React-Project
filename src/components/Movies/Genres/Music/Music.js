@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {genreActions} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {MusicBuild} from "./MusicBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 const Music = () => {
     const {genres:musics} = useSelector(state => state.genreReducer)

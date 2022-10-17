@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {genreActions, genreReducer} from "../../../../redux/slices/genreSlice/genre.slice";
 import {genre} from "../../../../configs/urls";
 import {AdventureBuild} from "./AdvantureBuild";
-import css from "../genreStyle.module.css";
+import css from "../../movieStyle.module.css";
 
 const Adventure = () => {
     const {genres:adventures} = useSelector(state => state.genreReducer)
