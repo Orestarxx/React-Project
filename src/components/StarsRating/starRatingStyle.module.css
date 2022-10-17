@@ -1,0 +1,14 @@
+.inputStar{
+    display: none;
+}
+.starHolder{
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+}
+.star{
+    cursor: pointer;
+    transition: 200ms;
+
+}

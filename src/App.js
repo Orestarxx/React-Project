@@ -2,8 +2,8 @@ import './App.css';
 import {Route,Routes} from "react-router-dom";
 
 import {MainLayOut} from "./mainLayOut/MainLayOut";
-import {MovieList} from "./components/MovieList/MovieList";
-import {MovieDetails} from "./components/MovieDetails/MovieDetails";
+import {MovieList} from "./components/Movies/MovieList/MovieList";
+import {MovieDetails} from "./components/Movies/MovieDetails/MovieDetails";
 import {
     Action,
     Adventure,
@@ -15,7 +15,7 @@ import {
     Family,
     Fantasy,
     History, Horror, Music, Mystery, Romance, ScienceFiction, Thriller, TvMovie, War, Western
-} from "./components/Genre";
+} from "./components/Movies/Genres";
 
 function App() {
   return (

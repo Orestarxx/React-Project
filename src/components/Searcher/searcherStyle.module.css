@@ -1,10 +1,7 @@
-.searcher{
-
-}
 button{
     margin-left: 10px;
 }
-input{
+.searcher{
     width: 400px;
     height: 20px;
 }

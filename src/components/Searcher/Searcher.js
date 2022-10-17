@@ -4,7 +4,7 @@ import css from './searcherStyle.module.css'
 const Searcher = () => {
     return (
         <form>
-            <input type="text"/>
+            <input className={css.searcher} type="text"/>
             <button>Search</button>
         </form>
     );
