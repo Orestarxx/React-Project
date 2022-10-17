@@ -17,6 +17,7 @@ const MovieList = () => {
     useEffect(() => {
         dispatch(movieActions.getAllMovie(page))
 
+
     }, [page]);
     const nextPage = () =>setPage(prev =>prev +1)
     const backPage = () =>setPage(prev =>prev -1)

@@ -4,14 +4,18 @@
     justify-content: center;
     flex-direction: column;
 
-}
 
+}
 .keyboard{
-    width: 90%;
+    width: 80%;
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+     background-color: #F0F0F1;
+}
+.themeSwitcher{
+
 }
 .holder{
     width: 100%;
@@ -23,12 +27,14 @@
     width: 10%;
     margin-left: 20px;
     height: 800px;
+    background-color: #F0F0F1;
 
 
 }
 .right{
     width: 80%;
     margin-right: 20px;
+    background-color: #F0F0F1;
 }
 .right, .left, .keyboard{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
