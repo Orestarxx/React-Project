@@ -1,11 +1,13 @@
 import React from 'react';
 import css from "../../movieStyle.module.css";
 import {StarsRating} from "../../../StarsRating/StarsRating";
+import {useNavigate} from "react-router-dom";
 
 const FantasyBuild = ({fantasy}) => {
-    const {backdrop_path,title,vote_average} =fantasy;
+    const {id,backdrop_path,title,vote_average} =fantasy;
+   const navigate = useNavigate()
     return (
-        <div className={css.mainCard}>
+        <div className={css.mainCard} onClick={()=>{navigate(id.toString(),{state:{...fantasy}})}}>
             <div className={css.card}>
                 <div className={css.genreInfo}></div>
                 <div className={css.imgHolder}>

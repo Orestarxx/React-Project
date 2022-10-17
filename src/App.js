@@ -3,7 +3,7 @@ import {Route,Routes} from "react-router-dom";
 
 import {MainLayOut} from "./mainLayOut/MainLayOut";
 import {MovieList} from "./components/Movies/MovieList/MovieList";
-import {MovieDetails} from "./components/Movies/MovieDetails/MovieDetails";
+import {MovieDetails} from "./components/Movies/MovieList/MovieDetails/MovieDetails";
 import {
     Action,
     Adventure,
@@ -18,38 +18,57 @@ import {
 } from "./components/Movies/Genres";
 
 function App() {
-  return (
-      <div>
-    <Routes>
-      <Route path={'/'} element={<MainLayOut/>}>
-          <Route path={'/allMovies'} element={<MovieList/>}/>
-          <Route path={'/movieDetails'} element={<MovieDetails/>}/>
-          <Route path={'/actions'} element={<Action/>}/>
-          <Route path={'/adventures'} element={<Adventure/>}/>
-          <Route path={'/animations'} element={<Animation/>}/>
-          <Route path={'/comedies'} element={<Comedy/>}/>
-          <Route path={'/crimes'} element={<Crime/>}/>
-          <Route path={'/documentaries'} element={<Documentary/>}/>
-          <Route path={'/dramas'} element={<Drama/>}/>
-          <Route path={'/families'} element={<Family/>}/>
-          <Route path={'/fantasies'} element={<Fantasy/>}/>
-          <Route path={'/histories'} element={<History/>}/>
-          <Route path={'/horrors'} element={<Horror/>}/>
-          <Route path={'/musics'} element={<Music/>}/>
-          <Route path={'/mysteries'} element={<Mystery/>}/>
-          <Route path={'/romances'} element={<Romance/>}/>
-          <Route path={'/scienceFictions'} element={<ScienceFiction/>}/>
-          <Route path={'/thrillers'} element={<Thriller/>}/>
-          <Route path={'/tvMovies'} element={<TvMovie/>}/>
-          <Route path={'/wars'} element={<War/>}/>
-          <Route path={'/westerns'} element={<Western/>}/>
-      </Route>
+    return (
+        <div>
+            <Routes>
+                <Route path={'/'} element={<MainLayOut/>}>
+                    <Route path={'/allMovies'} element={<MovieList/>}/>
+                    <Route path={'allMovies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/actions'} element={<Action/>}/>
+                    <Route path={'actions/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/adventures'} element={<Adventure/>}/>
+                    <Route path={'adventures/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/animations'} element={<Animation/>}/>
+                    <Route path={'animations/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/comedies'} element={<Comedy/>}/>
+                    <Route path={'comedies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/crimes'} element={<Crime/>}/>
+                    <Route path={'crimes/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/documentaries'} element={<Documentary/>}/>
+                    <Route path={'documentaries/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/dramas'} element={<Drama/>}/>
+                    <Route path={'dramas/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/families'} element={<Family/>}/>
+                    <Route path={'families/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/fantasies'} element={<Fantasy/>}/>
+                    <Route path={'fantasies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/histories'} element={<History/>}/>
+                    <Route path={'histories/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/horrors'} element={<Horror/>}/>
+                    <Route path={'horrors/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/musics'} element={<Music/>}/>
+                    <Route path={'musics/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/mysteries'} element={<Mystery/>}/>
+                    <Route path={'mysteries/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/romances'} element={<Romance/>}/>
+                    <Route path={'romances/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/scienceFictions'} element={<ScienceFiction/>}/>
+                    <Route path={'scienceFictions/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/thrillers'} element={<Thriller/>}/>
+                    <Route path={'thrillers/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/tvMovies'} element={<TvMovie/>}/>
+                    <Route path={'tvMovies/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/wars'} element={<War/>}/>
+                    <Route path={'wars/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/westerns'} element={<Western/>}/>
+                    <Route path={'westerns/:id'} element={<MovieDetails/>}/>
+                </Route>
 
-    </Routes>
-      </div>
+            </Routes>
+        </div>
 
 
-  );
+    );
 }
 
 export default App;

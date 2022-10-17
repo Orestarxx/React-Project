@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {movieActions} from "../../../redux/slices";
 import {MovieListBuild} from "./MovieListBuild";
 import css from '../movieStyle.module.css'
-import {StarsRating} from "../../StarsRating/StarsRating";
+
 
 
 
@@ -25,8 +25,8 @@ const MovieList = () => {
         <div className={css.holder}>
             {movies.results?.map(movie => <MovieListBuild key={movie.id} movie={movie}/>)}
             <div className={css.buttonHolder}>
-                <button onClick={backPage} disabled={page === 1}>Back</button>
-                <button onClick={nextPage} disabled={!movies.results?.length}>Next</button>
+                <button className={css.paginationButt} onClick={backPage} disabled={page === 1}>Back</button>
+                <button className={css.paginationButt} onClick={nextPage} disabled={!movies.results?.length}>Next</button>
             </div>
         </div>
     );

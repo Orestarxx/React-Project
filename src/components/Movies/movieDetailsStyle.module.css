@@ -1,0 +1,14 @@
+.infoHolder{
+    display: flex;
+
+}
+.movieInfo{
+    width: 70%;
+}
+
+
+.posterHolder{
+    width: 25%;
+    height: 400px;
+    margin: 10px;
+}
