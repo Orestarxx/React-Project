@@ -4,10 +4,12 @@ import {Outlet} from 'react-router-dom'
 import styled,{ThemeProvider} from "styled-components";
 import {useState} from "react";
 
-
 import {KeyBoard} from "../components/KeyBoard/KeyBoard";
 import css from './mainStyle.module.css'
+
 import {lightTheme,darkTheme,GlobalStyles} from '../darkMode/theme'
+
+
 const StyledApp = styled.div``
 
 const MainLayOut = () => {
@@ -21,7 +23,12 @@ const MainLayOut = () => {
             <StyledApp>
         <div className={css.main}>
             <div className={css.keyboard}>
-                <button onClick={() =>themeToggler()} className={css.themeSwitcher}>Switch</button>
+
+                <label className={css.switch} >
+                    <input type="checkbox" onClick={() =>themeToggler()}/>
+                    <span className={css.slider}></span>
+                </label>
+
                 <KeyBoard/>
                 <div></div>
             </div>

@@ -20,6 +20,7 @@ import {
 function App() {
     return (
         <div>
+
             <Routes>
                 <Route path={'/'} element={<MainLayOut/>}>
                     <Route path={'/allMovies'} element={<MovieList/>}/>
