@@ -13,11 +13,12 @@ const Action = () => {
     console.log(action);
     const dispatch = useDispatch()
     const [page,setPage] = useState(1)
+
     useEffect(() =>{
-     dispatch(genreActions.getByGenreId(genre.Action,page))
+     dispatch(genreActions.getByGenreId(genre.Action))
 
 
-    },[page,dispatch])
+    },[page])
     const nextPage = () =>setPage(prev =>prev +1)
     const backPage = () =>setPage(prev =>prev -1)
 
