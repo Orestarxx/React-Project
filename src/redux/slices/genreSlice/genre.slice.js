@@ -13,25 +13,14 @@ const getByGenreId = createAsyncThunk(
     async (id,{rejectWithValue}) =>{
         try{
            const {data} = await movieService.getByGenreId(id)
-            console.log(data);
+            // console.log(data);
             return data
         }catch (e){
             return rejectWithValue(e.response.data)
         }
     }
 );
-// const getGenrePagination = createAsyncThunk(
-//     'genreSlice/ getGenrePagination',
-//     async (id,{rejectWithValue}) =>{
-//         try{
-//             const {data} = await movieService.getByGenreId(id)
-//             console.log(data);
-//             return data
-//         }catch (e){
-//             return rejectWithValue(e.response.data)
-//         }
-//     }
-// );
+
 
 const genreSlice = createSlice({
     name:'genreSlice',
@@ -42,11 +31,13 @@ const genreSlice = createSlice({
             .addCase(getByGenreId.fulfilled,(state, action) =>{
                 state.genres = action.payload
             })
+
 });
 const {reducer:genreReducer,actions} = genreSlice;
 
 const genreActions = {
 getByGenreId
+
 }
 export {
     genreReducer,genreActions

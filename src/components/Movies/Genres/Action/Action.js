@@ -14,11 +14,20 @@ const Action = () => {
     const dispatch = useDispatch()
     const [page,setPage] = useState(1)
     useEffect(() =>{
-     dispatch(genreActions.getByGenreId(genre.Action))
-    },[dispatch])
+     dispatch(genreActions.getByGenreId(genre.Action,page))
+
+
+    },[page,dispatch])
+    const nextPage = () =>setPage(prev =>prev +1)
+    const backPage = () =>setPage(prev =>prev -1)
+
     return (
         <div className={css.holder}>
             {action.results?.map(action => <ActionBuild key={action.id} action={action}/>)}
+            <div className={css.buttonHolder}>
+                <button className={css.paginationButt} onClick={backPage} disabled={page === 1}>Back</button>
+                <button className={css.paginationButt} onClick={nextPage} disabled={!action.results?.length}>Next</button>
+            </div>
         </div>
     );
 };

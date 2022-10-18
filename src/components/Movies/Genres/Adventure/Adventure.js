@@ -8,6 +8,7 @@ import css from "../../movieStyle.module.css";
 
 const Adventure = () => {
     const {genres:adventures} = useSelector(state => state.genreReducer)
+    console.log(adventures);
     const dispatch = useDispatch()
     useEffect(() =>{
         dispatch(genreActions.getByGenreId(genre.Adventure))

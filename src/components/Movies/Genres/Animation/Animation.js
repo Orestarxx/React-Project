@@ -7,6 +7,7 @@ import css from "../../movieStyle.module.css";
 
 const Animation = () => {
    const {genres:animations} = useSelector(state => state.genreReducer)
+    console.log(animations);
    const dispatch = useDispatch()
     useEffect(() =>{
         dispatch(genreActions.getByGenreId(genre.Animation))
