@@ -1,6 +1,7 @@
 import React from 'react';
 
 import css from '../../movieDetailsStyle.module.css'
+import {StarsRating} from "../../../StarsRating/StarsRating";
 
 const MovieDetailsBuild = ({movie}) => {
     const {overview,poster_path,original_language,title,release_date,popularity} = movie;
@@ -15,6 +16,7 @@ const MovieDetailsBuild = ({movie}) => {
                    <div> <b>Original language: </b>{original_language}</div>
                    <div><b>Release date: </b>{release_date}</div>
                    <div><b>Popularity: </b>{popularity}</div>
+                   <StarsRating/>
                </div>
             </div>
 

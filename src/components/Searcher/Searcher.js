@@ -12,7 +12,7 @@ const Searcher = () => {
     const dispatch = useDispatch()
     useEffect(() =>{
   dispatch(movieActions.getAllMovie())
-    },[])
+    },[name])
 
     const handleInput = event => {
         setName(event.target.value);
@@ -25,9 +25,9 @@ const Searcher = () => {
 
 
     return (
-        <div>
+        <div className={css.searchHolder}>
             <input className={css.searcher} type="text"  onChange={handleInput}/>
-            <button onClick={searchMovie}>Search</button>
+            <button onClick={searchMovie} className={css.searchButt}>Search</button>
         </div>
 
 

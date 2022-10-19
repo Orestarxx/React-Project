@@ -7,6 +7,7 @@ import {Header} from "../components/Header/Header";
 import css from './mainStyle.module.css'
 import {lightTheme,darkTheme,GlobalStyles} from '../darkMode/theme'
 import {Searcher} from "../components/Searcher/Searcher";
+import {MovieList} from "../components/Movies/MovieList/MovieList";
 
 
 const StyledApp = styled.div``
@@ -37,6 +38,7 @@ const Main = () => {
                     <Header/>
                 </div>
                 <div className={css.right}>
+
                     <Outlet/>
                 </div>
 

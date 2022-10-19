@@ -11,6 +11,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: #F0F0F1;
+    border-radius: 10%;
+    margin-top: 10px;
 }
 .avatarHolder{
     margin-right: 5px;

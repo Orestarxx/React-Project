@@ -21,8 +21,7 @@ const Animation = () => {
             {animations.results?.map(animation => <AnimationBuild animation={animation} key={animation.id}/>)}
             <div className={css.buttonHolder}>
                 <button className={css.paginationButt} onClick={backPage} disabled={page === 1}>Back</button>
-                <button className={css.paginationButt} onClick={nextPage} disabled={!animations.results?.length}>Next
-                </button>
+                <button className={css.paginationButt} onClick={nextPage} disabled={!animations.results?.length}>Next</button>
             </div>
         </div>
     );
