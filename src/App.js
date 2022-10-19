@@ -1,7 +1,7 @@
 import './App.css';
 import {Route,Routes} from "react-router-dom";
 
-import {MainLayOut} from "./mainLayOut/MainLayOut";
+import {Main} from "./main/Main";
 import {MovieList} from "./components/Movies/MovieList/MovieList";
 import {MovieDetails} from "./components/Movies/MovieList/MovieDetails/MovieDetails";
 import {
@@ -22,7 +22,7 @@ function App() {
         <div>
 
             <Routes>
-                <Route path={'/'} element={<MainLayOut/>}>
+                <Route path={'/'} element={<Main/>}>
                     <Route path={'/allMovies'} element={<MovieList/>}/>
                     <Route path={'allMovies/:id'} element={<MovieDetails/>}/>
                     <Route path={'/actions'} element={<Action/>}/>

@@ -7,9 +7,11 @@ import {movieActions} from "../../redux/slices";
 const Searcher = () => {
     const [name, setName] = useState(" ");
    const {movies} = useSelector(state => state.movieReducer)
+    console.log(movies);
+    console.log(name);
     const dispatch = useDispatch()
     useEffect(() =>{
-
+  dispatch(movieActions.getAllMovie())
     },[])
 
     const handleInput = event => {
@@ -18,6 +20,7 @@ const Searcher = () => {
 
     const searchMovie = () => {
         dispatch(movieActions.searchMovie(name))
+
     };
 
 

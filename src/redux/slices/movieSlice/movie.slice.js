@@ -33,18 +33,18 @@ const searchMovie = createAsyncThunk(
         }
     }
 );
-// const getMovieById = createAsyncThunk(
-//     'movieSlice/getMovieById',
-//     async (id,{rejectWithValue}) =>{
-//         try {
-//             const {data} = await movieService.getMovieById(id)
-//             console.log(data);
-//             return data
-//         }catch (e){
-//             return rejectWithValue(e.response.data)
-//         }
-//     }
-// )
+const getMovieById = createAsyncThunk(
+    'movieSlice/getMovieById',
+    async (id,{rejectWithValue}) =>{
+        try {
+            const {data} = await movieService.getMovieById(id)
+            console.log(data);
+            return data
+        }catch (e){
+            return rejectWithValue(e.response.data)
+        }
+    }
+)
 const movieSlice = createSlice({
     name:'movieSlice',
     initialState,
@@ -54,14 +54,15 @@ const movieSlice = createSlice({
             .addCase(getAllMovie.fulfilled,(state, action) =>{
                 state.movies = action.payload
             })
-            // .addCase(searchMovie.fulfilled,(state, action) =>{
-            //      action.payload.results.forEach(data =>{
-            //     debugger
-            //
-            //         state.movies.push( await getMovieById(data.id))
-            //
-            //     })
-            // })
+            .addCase(searchMovie.fulfilled,(state, action) =>{
+                state.movies = action.payload
+                //  action.payload.results.forEach(data =>{
+                // debugger
+                //
+                //     state.movies.push( await getMovieById(data.id))
+                //
+                // })
+            })
 });
 
 const {reducer:movieReducer,actions} = movieSlice;

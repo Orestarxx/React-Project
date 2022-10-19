@@ -46,6 +46,7 @@
 
 .card:hover {
     transform: translateY(-1px);
+    background-color: gainsboro;
 }
 
 .card:active {
