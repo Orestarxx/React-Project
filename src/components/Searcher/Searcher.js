@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import css from './searcherStyle.module.css'
 import {useDispatch} from "react-redux";
 import {movieActions} from "../../redux/slices";
-import {genreActions} from "../../redux/slices/genreSlice/genre.slice";
+
 
 
 const Searcher = () => {
@@ -18,7 +18,7 @@ const Searcher = () => {
 
     const searchMovie = () => {
         dispatch(movieActions.searchMovie(name))
-        dispatch(genreActions.getByGenreTVMovieId(name))
+
 
 
     };
