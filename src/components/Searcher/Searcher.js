@@ -27,7 +27,7 @@ const Searcher = () => {
     return (
         <div className={css.searchHolder}>
 
-            <input className={css.searcher} type="text" onChange={handleInput} value={name}/>
+            <input className={css.searcher} type="text" onChange={handleInput} value={name} placeholder={'find all movie on "all Movies"'}/>
             <button className={css.searchButt} onClick={searchMovie}>Search</button>
 
 
