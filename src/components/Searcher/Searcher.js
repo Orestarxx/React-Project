@@ -31,6 +31,7 @@ const Searcher = () => {
             <button className={css.searchButt} onClick={searchMovie}>Search</button>
 
 
+
         </div>
 
 
