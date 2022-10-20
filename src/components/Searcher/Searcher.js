@@ -1,18 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import css from './searcherStyle.module.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {movieActions} from "../../redux/slices";
+import {genreActions} from "../../redux/slices/genreSlice/genre.slice";
 
 
 const Searcher = () => {
-    const [name, setName] = useState(" ");
-   const {movies} = useSelector(state => state.movieReducer)
-    console.log(movies);
+    const [name, setName] = useState("");
+
     console.log(name);
     const dispatch = useDispatch()
-    useEffect(() =>{
-  dispatch(movieActions.getAllMovie())
-    },[name])
+
 
     const handleInput = event => {
         setName(event.target.value);
@@ -20,18 +18,23 @@ const Searcher = () => {
 
     const searchMovie = () => {
         dispatch(movieActions.searchMovie(name))
+        dispatch(genreActions.getByGenreTVMovieId(name))
+
 
     };
 
 
     return (
         <div className={css.searchHolder}>
-            <input className={css.searcher} type="text"  onChange={handleInput}/>
-            <button onClick={searchMovie} className={css.searchButt}>Search</button>
+
+            <input className={css.searcher} type="text" onChange={handleInput} value={name}/>
+            <button className={css.searchButt} onClick={searchMovie}>Search</button>
+
+
         </div>
 
 
     );
 };
 
-export  {Searcher};
+export {Searcher};

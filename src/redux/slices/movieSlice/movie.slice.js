@@ -23,9 +23,9 @@ const getAllMovie = createAsyncThunk(
 );
 const searchMovie = createAsyncThunk(
     'movieSlice/searchMovie',
-    async (movie,{rejectWithValue}) =>{
+    async (name,{rejectWithValue}) =>{
         try {
-            const {data} = await movieService.searchAll(movie)
+            const {data} = await movieService.searchAll(name)
             console.log(data);
             return data
         }catch (e){
@@ -56,12 +56,18 @@ const movieSlice = createSlice({
             })
             .addCase(searchMovie.fulfilled,(state, action) =>{
                 state.movies = action.payload
-                //  action.payload.results.forEach(data =>{
-                // debugger
+                 //
+                 //  action.payload.results.forEach(item =>{
+                 // console.log(item);
+                 // const {data} = movieService.getMovieById(item.id)
+                 //      console.log(data);
                 //
                 //     state.movies.push( await getMovieById(data.id))
                 //
                 // })
+            })
+            .addCase(getMovieById.fulfilled,(state, action) =>{
+                state.movies = action.payload
             })
 });
 
@@ -70,7 +76,7 @@ const {reducer:movieReducer,actions} = movieSlice;
 const movieActions = {
     getAllMovie,
     searchMovie,
-    // getMovieById
+     getMovieById
 }
 
 export {

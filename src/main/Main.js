@@ -30,7 +30,7 @@ const Main = () => {
                 </label>
                 <Searcher/>
                 <div className={css.avatarHolder}>
-                    <img src="https://yt3.ggpht.com/a/AATXAJz53i2G4CjMkuxp3RNCNAdOLG47wglRcalsuQ=s900-c-k-c0xffffffff-no-rj-mo" alt="" className={css.avatar}/><b>Login</b>
+                    <img src="https://yt3.ggpht.com/a/AATXAJz53i2G4CjMkuxp3RNCNAdOLG47wglRcalsuQ=s900-c-k-c0xffffffff-no-rj-mo" alt="" className={css.avatar}/><b>Join</b>
                 </div>
             </div>
             <div className={css.holder}>
