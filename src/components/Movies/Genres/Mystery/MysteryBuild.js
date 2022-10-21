@@ -9,7 +9,7 @@ const MysteryBuild = ({mystery}) => {
     return (
         <div className={css.mainCard}>
             <div className={css.card} onClick={()=>{navigate(id.toString(),{state:{...mystery}})}}>
-                <div className={css.genreInfo}></div>
+                <div className={css.badge}>Mystery</div>
                 <div className={css.imgHolder}>
                     <img src={`https://image.tmdb.org/t/p/w500${backdrop_path}`} alt="movie"/>
                 </div>

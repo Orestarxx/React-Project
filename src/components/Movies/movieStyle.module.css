@@ -130,3 +130,10 @@ img{
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+.badge{
+    border: #36395A 1px solid;
+    padding: 4px;
+    border-radius: 30%;
+    background-color: slategrey;
+    margin-bottom: 2px;
+}

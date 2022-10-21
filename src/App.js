@@ -4,6 +4,7 @@ import {Route,Routes} from "react-router-dom";
 import {Main} from "./main/Main";
 import {MovieList} from "./components/Movies/MovieList/MovieList";
 import {MovieDetails} from "./components/Movies/MovieList/MovieDetails/MovieDetails";
+import {Register,Login} from "../src/components/Account/index"
 import {
     Action,
     Adventure,
@@ -14,7 +15,7 @@ import {
     Drama,
     Family,
     Fantasy,
-    History, Horror, Music, Mystery, Romance, ScienceFiction, Thriller, TvMovie, War, Western
+    History, Horror, Music, Mystery, Romance, ScienceFiction, Thriller, TvMovie, War, Western,
 } from "./components/Movies/Genres";
 
 function App() {
@@ -63,6 +64,8 @@ function App() {
                     <Route path={'wars/:id'} element={<MovieDetails/>}/>
                     <Route path={'/westerns'} element={<Western/>}/>
                     <Route path={'westerns/:id'} element={<MovieDetails/>}/>
+                    <Route path={'/register'} element={<Register/>}/>
+                    <Route path={'/login'} element={<Login/>}/>
                 </Route>
 
             </Routes>

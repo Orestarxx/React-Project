@@ -10,7 +10,7 @@ const StarsRating = () => {
         <div className={css.starHolder}>
             {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1
-                return (<label>
+                return (<label className={css.labelStar}>
                     <input className={css.inputStar} type="radio" name="rating" value={ratingValue}
                            onClick={() => setRating(ratingValue)}/>
 
