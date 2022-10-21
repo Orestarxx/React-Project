@@ -7,7 +7,8 @@ import {Header} from "../components/Header/Header";
 import css from './mainStyle.module.css'
 import {lightTheme,darkTheme,GlobalStyles} from '../darkMode/theme'
 import {Searcher} from "../components/Searcher/Searcher";
-import {MovieList} from "../components/Movies/MovieList/MovieList";
+
+import {UserControler} from "../components/UserControler/UserControler";
 
 
 const StyledApp = styled.div``
@@ -30,7 +31,8 @@ const Main = () => {
                 </label>
                 <Searcher/>
                 <div className={css.avatarHolder}>
-                    <img src="https://yt3.ggpht.com/a/AATXAJz53i2G4CjMkuxp3RNCNAdOLG47wglRcalsuQ=s900-c-k-c0xffffffff-no-rj-mo" alt="" className={css.avatar}/><b>Join</b>
+                    <img src="https://yt3.ggpht.com/a/AATXAJz53i2G4CjMkuxp3RNCNAdOLG47wglRcalsuQ=s900-c-k-c0xffffffff-no-rj-mo" alt="" className={css.avatar}/>
+                <UserControler/>
                 </div>
             </div>
             <div className={css.holder}>
