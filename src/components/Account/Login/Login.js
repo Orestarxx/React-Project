@@ -1,4 +1,5 @@
 import React from 'react';
+
 import css from './loginStyle.module.css'
 
 const Login = () => {
@@ -9,11 +10,11 @@ const Login = () => {
                 <form className={css.loginForm}>
                     <div className={css.userBox}>
                         <input type="text" name="" required="" className={css.inputLog}/>
-                            <label>Username</label>
+                        <label>Username</label>
                     </div>
                     <div className={css.userBox}>
                         <input type="password" name="" required="" className={css.inputLog}/>
-                            <label>Password</label>
+                        <label>Password</label>
                     </div>
                     <a href="#">
                         <span></span>

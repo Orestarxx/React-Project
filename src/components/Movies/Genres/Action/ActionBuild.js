@@ -1,7 +1,8 @@
-import css from "../../movieStyle.module.css";
 import React from "react";
-import {StarsRating} from "../../../StarsRating/StarsRating";
 import {useNavigate} from "react-router-dom";
+
+import css from "../../movieStyle.module.css";
+import {StarsRating} from "../../../StarsRating/StarsRating";
 
 const ActionBuild = ({action}) => {
     const {id,title,backdrop_path,vote_average} = action;

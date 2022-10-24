@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
-import css from './searcherStyle.module.css'
 import {useDispatch} from "react-redux";
-import {movieActions} from "../../redux/slices";
 
+import css from './searcherStyle.module.css'
+import {movieActions} from "../../redux/slices";
 
 
 const Searcher = () => {
@@ -20,18 +20,15 @@ const Searcher = () => {
         dispatch(movieActions.searchMovie(name))
 
 
-
     };
 
 
     return (
         <div className={css.searchHolder}>
 
-            <input className={css.searcher} type="text" onChange={handleInput} value={name} placeholder={'find all movie on "all Movies"'}/>
+            <input className={css.searcher} type="text" onChange={handleInput} value={name}
+                   placeholder={'find all movie on "all Movies"'}/>
             <button className={css.searchButt} onClick={searchMovie}>Search</button>
-
-
-
         </div>
 
 

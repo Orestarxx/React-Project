@@ -1,7 +1,8 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
+
 import css from "../../movieStyle.module.css";
 import {StarsRating} from "../../../StarsRating/StarsRating";
-import {useNavigate} from "react-router-dom";
 
 const DramaBuild = ({drama}) => {
     const {id,backdrop_path,title,vote_average} = drama;
